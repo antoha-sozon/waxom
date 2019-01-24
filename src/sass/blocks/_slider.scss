@@ -51,4 +51,51 @@
 			margin-top: 50px;
 		}
 	}
+	.slick-dots {
+		position: absolute;
+	    bottom: 30px;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    padding: 0;
+	    margin: 0;
+	    list-style-type: none;
+	    li {
+	    	display: inline-block;
+	    	button {
+	    		    width: 14px;
+					height: 14px;
+					border: 2px solid transparent;
+					background-color: #8c8c8c;
+					border-radius: 50%;
+					margin: 8px;
+					font-size: 0;
+					line-height: 10px;
+					display: block;
+					padding: 0;
+					outline: none;
+	    	} 
+	    	&.slick-active {
+	    		button {
+	    			border: 2px solid $brown-light;
+	    			background-color: transparent; 
+	    		}
+	    	}
+	    }
+	}
+	.slick-arrow {
+		position: absolute;  
+		height: 70px; 
+		top: 50%;
+		transform: translateY(-50%);
+		line-height: 70px; 
+		font-size: 50px;
+		z-index: 1;
+		color: $brown-light;
+	}
+	.slick-prev { 
+		left: 0px;
+	}
+	.slick-next {
+		right: 0px;
+	}
 }

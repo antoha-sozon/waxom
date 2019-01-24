@@ -27,9 +27,15 @@ h2 {
     font-size: 14px;
     font-weight: 800;
     color: $white;
-	text-decoration: none;
+    text-decoration: none;
+    transition: background-color .4s, border-bottom-color .4s; 
     &-brown {
     	background-color: $brown-light;
     	border-bottom: 5px solid $brown;
+      &:hover,
+      &:active {
+        background-color: darken($brown-light, 10%);
+        border-bottom-color: darken($brown, 10%);
+      }
     }
 }
