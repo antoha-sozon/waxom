@@ -1,4 +1,7 @@
 .head-slider { 
+	.slider-block {
+		max-width: 650px;
+	}
 	.slick-slide {
 		display: flex;
 		flex-direction: column;
@@ -34,6 +37,7 @@
 		}
 		strong {
 			font-size: 20px;
+			font-weight: 400;
 
 			@media screen and (min-width: 768px) {
 				font-size: 36px;
@@ -42,6 +46,7 @@
 		h2 {
 			font-size: 40px;
 		    line-height: 1.3;
+		    font-weight: 800;
 
 			@media screen and (min-width: 768px) {
 				font-size: 52px;
@@ -50,5 +55,53 @@
 		.slider-btn {
 			margin-top: 50px;
 		}
+	}
+	.slick-dots {
+		position: absolute;
+	    bottom: 30px;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    padding: 0;
+	    margin: 0;
+	    list-style-type: none;
+	    li {
+	    	display: inline-block;
+	    	button {
+	    		    width: 14px;
+					height: 14px;
+					border: 2px solid transparent;
+					background-color: $grey-light;
+					border-radius: 50%;
+					margin: 8px;
+					font-size: 0;
+					line-height: 10px;
+					display: block;
+					padding: 0;
+					outline: none;
+	    	} 
+	    	&.slick-active {
+	    		button {
+	    			border: 2px solid $brown-light;
+	    			background-color: transparent; 
+	    		}
+	    	}
+	    }
+	}
+	.slick-arrow {
+		position: absolute;  
+		height: 70px; 
+		top: 50%;
+		transform: translateY(-50%);
+		line-height: 70px; 
+		font-size: 50px;
+		z-index: 1;
+		color: $brown-light;
+		cursor: pointer;
+	}
+	.slick-prev { 
+		left: 0px;
+	}
+	.slick-next {
+		right: 0px;
 	}
 }

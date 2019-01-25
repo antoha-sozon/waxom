@@ -10,6 +10,15 @@ p {
 
 h2 {
   margin: 20px 0;
+} 
+
+ul { 
+  list-style-type: none;
+  padding: 0;
+}
+
+::placeholder {
+	color: lighten($white, 10%);
 }
 
 .container {
@@ -27,9 +36,32 @@ h2 {
     font-size: 14px;
     font-weight: 800;
     color: $white;
-	text-decoration: none;
+    text-decoration: none;
+    transition: background-color .4s, border-bottom-color .4s; 
     &-brown {
     	background-color: $brown-light;
     	border-bottom: 5px solid $brown;
+      &:hover,
+      &:active {
+        background-color: darken($brown-light, 10%);
+        border-bottom-color: darken($brown, 10%);
+      }
+    }
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+    background-color: $brown-light;
+    opacity: 1;
+    transition: all 1s;
+
+    &.out {
+      opacity: 0;
+      visibility: hidden;
     }
 }
