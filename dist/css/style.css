@@ -548,51 +548,47 @@ th {
   margin: 0;
 }
 
-.header nav input[type="checkbox"] {
+.toggle-menu input[type="checkbox"] {
   display: none;
 }
 
-.header nav input[type="checkbox"]:checked ~ .mobile-menu span:before {
-  top: -8px;
+.toggle-menu input[type="checkbox"]:checked ~ .mobile-menu span:before {
+  top: -6px;
+  width: 25px;
   -webkit-transform: rotate(205deg);
   transform: rotate(205deg);
 }
 
-.header nav input[type="checkbox"]:checked ~ .mobile-menu span:after {
-  top: 8px;
+.toggle-menu input[type="checkbox"]:checked ~ .mobile-menu span:after {
+  top: 6px;
+  width: 25px;
   -webkit-transform: rotate(155deg);
   transform: rotate(155deg);
 }
 
-.header nav input[type="checkbox"]:checked ~ .menu {
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-  display: block;
-}
-
-.header .menu {
-  padding: 15px;
-  margin: -15px;
-  margin-top: -5px;
-  list-style-type: none;
-  background: #998675;
-  font-size: 14px;
-  line-height: 2.5em;
-  text-align: center;
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
+.main-menu {
+  -webkit-transform: translateX(110%);
+  transform: translateX(110%);
   -webkit-transition: -webkit-transform .4s;
   transition: -webkit-transform .4s;
   transition: transform .4s;
   transition: transform .4s, -webkit-transform .4s;
+  padding: 15px 0;
+  background: #998675;
+  font-size: 14px;
+  line-height: 2.5em;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  right: 0;
 }
 
-.header .menu a {
+.main-menu a {
   color: #fff;
   text-decoration: none;
 }
 
-.header .mobile-menu {
+.mobile-menu {
   width: 35px;
   height: 35px;
   position: absolute;
@@ -601,9 +597,9 @@ th {
   right: 15px;
 }
 
-.header .mobile-menu span {
+.mobile-menu span {
   width: 35px;
-  height: 5px;
+  height: 4px;
   background-color: #fff;
   display: block;
   position: absolute;
@@ -612,13 +608,14 @@ th {
   transform: translateY(-50%);
 }
 
-.header .mobile-menu span:after {
+.mobile-menu span:after {
   content: "";
   position: absolute;
   width: 35px;
-  height: 5px;
+  height: 4px;
   display: block;
-  top: -10px;
+  top: -8px;
+  right: 0;
   background-color: #fff;
   -webkit-transition: -webkit-transform .4s;
   transition: -webkit-transform .4s;
@@ -626,18 +623,24 @@ th {
   transition: transform .4s, -webkit-transform .4s;
 }
 
-.header .mobile-menu span:before {
+.mobile-menu span:before {
   content: "";
   position: absolute;
   width: 35px;
-  height: 5px;
+  height: 4px;
   display: block;
-  top: 10px;
+  top: 8px;
+  right: 0;
   background-color: #fff;
   -webkit-transition: -webkit-transform .4s;
   transition: -webkit-transform .4s;
   transition: transform .4s;
   transition: transform .4s, -webkit-transform .4s;
+}
+
+.toggle-menu input[type=checkbox]:checked ~ .main-menu {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
 }
 
 .head-slider .slick-slide {
@@ -781,6 +784,11 @@ h2 {
   margin: 20px 0;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
 .container {
   padding: 0 15px;
   margin: 0 auto;
@@ -810,4 +818,22 @@ h2 {
 .btn-brown:active {
   background-color: #7e6d5d;
   border-bottom-color: #463f3d;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+  background-color: #998675;
+  opacity: 1;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.loader.out {
+  opacity: 0;
+  visibility: hidden;
 }

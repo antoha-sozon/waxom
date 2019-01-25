@@ -10,6 +10,11 @@ p {
 
 h2 {
   margin: 20px 0;
+} 
+
+ul { 
+  list-style-type: none;
+  padding: 0;
 }
 
 .container {
@@ -37,5 +42,22 @@ h2 {
         background-color: darken($brown-light, 10%);
         border-bottom-color: darken($brown, 10%);
       }
+    }
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+    background-color: #998675;
+    opacity: 1;
+    transition: all .5s;
+
+    &.out {
+      opacity: 0;
+      visibility: hidden;
     }
 }

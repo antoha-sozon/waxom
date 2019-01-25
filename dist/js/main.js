@@ -1,3 +1,12 @@
+window.onload = function() {
+	// setTimeout(function(){
+		var preloader = document.getElementById('preloader');
+		if(!preloader.classList.contains('out')) {
+			preloader.classList.add('out');
+		}
+	// }, 1000);
+};	
+
 $('.head-slider').slick({
 	dots: true,
 	infinite: true,
