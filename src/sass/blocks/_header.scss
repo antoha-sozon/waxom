@@ -5,6 +5,7 @@
 	top: 0;
     z-index: 1;
     .logo {
+<<<<<<< HEAD
     	padding: $gatter / 2 0; 
 	    display: inline-block;
     	@media screen and (min-width: 768px) {
@@ -13,17 +14,44 @@
     	}
     }  
 }  
+=======
+    	padding: $gatter / 2 0;
+    	margin: 0;
+    }  
+} 
+
+.toggle-menu {
+	input[type="checkbox"] {
+		display: none; 
+		&:checked ~ .mobile-menu span:before {
+	     	top: -6px;
+	     	width: 25px;
+	        transform: rotate(205deg);
+		}
+		&:checked ~ .mobile-menu span:after {
+	     	top: 6px;
+	     	width: 25px;
+	        transform: rotate(155deg);
+		}  
+	}
+}
+>>>>>>> 8c6975cf4a5cc878fea55ce1dc06eff8df29285b
 
 .main-menu {
     transform: translateX(110%);
     transition: transform .4s;  
     padding: $gatter/2 0;    
+<<<<<<< HEAD
     background-color: $grey-dark; 
+=======
+    background: #998675; 
+>>>>>>> 8c6975cf4a5cc878fea55ce1dc06eff8df29285b
     font-size: 14px;
     line-height: 2.5em;
     text-align: center;
     position: fixed; 
     left: 0;
+<<<<<<< HEAD
     right: 0;  
     display: flex;
     align-items: center;
@@ -69,6 +97,13 @@
   		float: right;
   		margin-top: 45px;
 	}
+=======
+    right: 0;
+    a {
+    	color: $white;
+    	text-decoration: none;	
+    }
+>>>>>>> 8c6975cf4a5cc878fea55ce1dc06eff8df29285b
 }   
 
 .mobile-menu {
@@ -76,6 +111,7 @@
 	height: 35px;
 	position: absolute;
 	display: block;
+<<<<<<< HEAD
 	top: 45px;
 	right: $gatter / 2;
 	&.open {
@@ -90,6 +126,10 @@
 	        transform: rotate(155deg);
 		}  
 	}
+=======
+	top: 25px;
+	right: $gatter / 2;
+>>>>>>> 8c6975cf4a5cc878fea55ce1dc06eff8df29285b
 	span {
 		width: 35px;
 		height: 4px;
@@ -121,6 +161,7 @@
     		transition: transform .4s;
 		}
 	}
+<<<<<<< HEAD
 
 	@media screen and (min-width: 768px) {
 		display: none;
@@ -152,4 +193,9 @@
 		padding: 0 15px;
     	max-width: 100%;
     }
+=======
+} 
+.toggle-menu input[type=checkbox]:checked ~ .main-menu {
+	transform: translateX(0); 
+>>>>>>> 8c6975cf4a5cc878fea55ce1dc06eff8df29285b
 }

@@ -13,6 +13,7 @@ $brown-light: #998675;
 $overlay: #111111;
 
 //GRID
+<<<<<<< HEAD
 $gatter: 30px; 
 $grid-count: 12;  
 $mobile-width: 320px;
@@ -23,3 +24,10 @@ $viewports: (
 	sm: $tablet-width,
 	md: $conteiner-width
 );  
+=======
+$gatter: 30px;
+
+
+
+$desktop: 1200px;
+>>>>>>> 8c6975cf4a5cc878fea55ce1dc06eff8df29285b
