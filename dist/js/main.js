@@ -1,15 +1,10 @@
-var toggleMenu = document.getElementById('toggleMenu');
-var seacrh = document.getElementById('seacrh');
-
-toggleMenu.onclick = function () {
-	var mainMenu = document.getElementById('mainMenu');
-	mainMenu.classList.toggle('open'); 
-	toggleMenu.classList.toggle('open'); 
+document.getElementById('toggleMenu').onclick = function () { 
+	document.getElementById('mainMenu').classList.toggle('open'); 
+	this.classList.toggle('open'); 
 } 
 
-seacrh.onclick = function () {
-	var seacrhBlock = document.getElementById('seacrhBlock'); 
-	seacrhBlock.classList.toggle('open'); 
+document.getElementById('seacrh').onclick = function () { 
+	document.getElementById('seacrhBlock').classList.toggle('open'); 
 } 
 
 window.onload = function() {

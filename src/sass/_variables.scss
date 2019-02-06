@@ -2,18 +2,24 @@
 $font: 'Raleway', sans-serif;
 $light-font: 'Montserrat', sans-serif;
 
-//COOLORS
+//COLORS
 $white: #fff;
 $accent: #c7b299;
 $grey-dark: #555555;
 $grey-light: #8c8c8c;
+$grey-lighten: #fbfaf8; 
 $brown: #615855;
 $brown-light: #998675; 
 $overlay: #111111;
 
 //GRID
-$gatter: 30px;
-
-
-
-$desktop: 1200px;
+$gatter: 30px; 
+$grid-count: 12;  
+$mobile-width: 320px;
+$tablet-width: 768px;
+$conteiner-width: 1100px;   
+$viewports: (  
+	xs: $mobile-width,
+	sm: $tablet-width,
+	md: $conteiner-width
+);  

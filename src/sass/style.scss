@@ -1,8 +1,11 @@
 @import "fonts";
 @import "variables";
 @import "normalize";
+@import "blocks/grid";
+@import "blocks/loader";
 
-@import "blocks/header"; 
-@import "blocks/slider"; 
-@import "blocks/main"; 
-@import "blocks/loader"; 
+@import "blocks/main";
+@import "blocks/header";
+@import "blocks/slider";
+@import "blocks/services";
+@import "blocks/projects"; 

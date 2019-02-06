@@ -1,0 +1,41 @@
+.section-services { 
+	a {
+		display: block;
+		color: currentColor;
+		text-decoration: none;
+		position: relative;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+		transition: color .3s;
+		@media screen and (min-width: 768px) {
+			margin-bottom: 0px;
+		}
+		i {
+			font-size: 40px;
+		}
+		h4 {
+			color: $grey-dark;
+			transition: color .3s;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 30%;
+			height: 3px;
+			background-color: $grey-light;
+			transition: background-color .3s;
+		}
+		&:hover {
+			color: $accent; 
+			h4 {
+				color: $accent; 
+			}
+			&:after {
+				background-color: $accent;
+			}
+		}
+	}
+}

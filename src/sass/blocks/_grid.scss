@@ -1,0 +1,36 @@
+#wrapper { 
+  position: relative;
+  vertical-align: top;
+  width: 100%; 
+  overflow: hidden;
+}
+
+.container {
+	padding: 0 #{$gatter / 2};
+	margin: 0 auto;
+  width: 100%;
+	max-width: $conteiner-width;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -#{$gatter / 2};
+}
+
+.col {
+  padding: 0 #{$gatter / 2};
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 100%;
+} 
+
+@each $key, $viewport in $viewports {
+	@media all and (min-width: $viewport) {
+		@for $i from 1 through $grid-count {
+			.col-#{$key}-#{$i} {
+				width: 100% / $grid-count * $i;
+			}
+		}
+	}
+}

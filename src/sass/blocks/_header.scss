@@ -5,9 +5,8 @@
 	top: 0;
     z-index: 1;
     .logo {
-    	padding: $gatter / 2 0;
-    	margin: 0;
-
+    	padding: $gatter / 2 0; 
+	    display: inline-block;
     	@media screen and (min-width: 768px) {
 			margin: 30px 0 0 0;
 			float: left;
@@ -19,13 +18,17 @@
     transform: translateX(110%);
     transition: transform .4s;  
     padding: $gatter/2 0;    
-    background-color: $brown-light; 
+    background-color: $grey-dark; 
     font-size: 14px;
     line-height: 2.5em;
     text-align: center;
     position: fixed; 
     left: 0;
-    right: 0;
+    right: 0;  
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    height: calc(100% - 93px);
 	&.open {
 	    transform: translateX(0%);  
 	}
@@ -40,18 +43,17 @@
 
     ul {
     	position: relative;
+    	width: 100%;
     	li { 
 			&.active { 
 				a {
 					color: $accent;
 				}
-			} 
-
+			}  
     		@media screen and (min-width: 768px) {
 				display: inline-block;
 				padding: 0 3px;
-    		}
-
+    		} 
     		@media screen and (min-width: 950px) {
 				display: inline-block;
 				padding: 0 15px;
@@ -65,7 +67,7 @@
   		position: relative;
   		background-color: transparent;
   		float: right;
-  		margin-top: 30px;
+  		margin-top: 45px;
 	}
 }   
 
@@ -74,7 +76,7 @@
 	height: 35px;
 	position: absolute;
 	display: block;
-	top: 25px;
+	top: 45px;
 	right: $gatter / 2;
 	&.open {
 		& span:before {
@@ -127,23 +129,27 @@
 
 .seacrh-block {
     position: absolute;
-    top: 0;
-	right: 50px; 
+    bottom: -30px;
+	right: 0;  
 	width: 100%;
-	transform: scale(0);
-    transition: transform .5s;
+	max-width: 0; 
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: max-width .5s, padding .5s;
     input {
     	width: 100%;
 	    background-color: $brown-light;
 	    border: none;
-	    border-radius: 20px;
+	    border-radius: 10px;
 	    outline: none;
 	    padding: 5px 20px;
 	    box-sizing: border-box;
 	    color: $white;
 	    border-bottom: 3px solid $brown;
+        display: block; 
     }
-    &.open { 
-		transform: scale(1);
+    &.open {  
+		padding: 0 15px;
+    	max-width: 100%;
     }
 }
