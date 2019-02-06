@@ -1,11 +1,9 @@
 .header {
-	position: absolute;
-	overflow: hidden;
+	position: absolute; 
 	width: 100%;
 	top: 0;
     z-index: 1;
-    .logo {
-<<<<<<< HEAD
+    .logo { 
     	padding: $gatter / 2 0; 
 	    display: inline-block;
     	@media screen and (min-width: 768px) {
@@ -13,12 +11,7 @@
 			float: left;
     	}
     }  
-}  
-=======
-    	padding: $gatter / 2 0;
-    	margin: 0;
-    }  
-} 
+}   
 
 .toggle-menu {
 	input[type="checkbox"] {
@@ -34,24 +27,18 @@
 	        transform: rotate(155deg);
 		}  
 	}
-}
->>>>>>> 8c6975cf4a5cc878fea55ce1dc06eff8df29285b
+} 
 
 .main-menu {
     transform: translateX(110%);
     transition: transform .4s;  
-    padding: $gatter/2 0;    
-<<<<<<< HEAD
-    background-color: $grey-dark; 
-=======
-    background: #998675; 
->>>>>>> 8c6975cf4a5cc878fea55ce1dc06eff8df29285b
+    padding: $gatter/2 0;     
+    background-color: $grey-dark;  
     font-size: 14px;
     line-height: 2.5em;
     text-align: center;
     position: fixed; 
-    left: 0;
-<<<<<<< HEAD
+    left: 0; 
     right: 0;  
     display: flex;
     align-items: center;
@@ -96,22 +83,14 @@
   		background-color: transparent;
   		float: right;
   		margin-top: 45px;
-	}
-=======
-    right: 0;
-    a {
-    	color: $white;
-    	text-decoration: none;	
-    }
->>>>>>> 8c6975cf4a5cc878fea55ce1dc06eff8df29285b
+	} 
 }   
 
 .mobile-menu {
 	width: 35px;
 	height: 35px;
 	position: absolute;
-	display: block;
-<<<<<<< HEAD
+	display: block; 
 	top: 45px;
 	right: $gatter / 2;
 	&.open {
@@ -125,11 +104,7 @@
 	     	width: 25px;
 	        transform: rotate(155deg);
 		}  
-	}
-=======
-	top: 25px;
-	right: $gatter / 2;
->>>>>>> 8c6975cf4a5cc878fea55ce1dc06eff8df29285b
+	} 
 	span {
 		width: 35px;
 		height: 4px;
@@ -160,8 +135,7 @@
 			background-color: $white;
     		transition: transform .4s;
 		}
-	}
-<<<<<<< HEAD
+	} 
 
 	@media screen and (min-width: 768px) {
 		display: none;
@@ -174,15 +148,13 @@
 	right: 0;  
 	width: 100%;
 	max-width: 0; 
-    overflow: hidden;
-    box-sizing: border-box;
+    overflow: hidden; 
     transition: max-width .5s, padding .5s;
     input {
     	width: 100%;
 	    background-color: $brown-light;
 	    border: none;
-	    border-radius: 10px;
-	    outline: none;
+	    border-radius: 10px; 
 	    padding: 5px 20px;
 	    box-sizing: border-box;
 	    color: $white;
@@ -192,10 +164,5 @@
     &.open {  
 		padding: 0 15px;
     	max-width: 100%;
-    }
-=======
-} 
-.toggle-menu input[type=checkbox]:checked ~ .main-menu {
-	transform: translateX(0); 
->>>>>>> 8c6975cf4a5cc878fea55ce1dc06eff8df29285b
+    } 
 }

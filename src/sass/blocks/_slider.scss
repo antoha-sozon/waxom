@@ -45,39 +45,20 @@
 	.slick-dots {
 		position: absolute;
 	    bottom: 30px;
-	    left: 50%;
-<<<<<<< HEAD
+	    left: 50%; 
 	    transform: translateX(-50%); 
 	    list-style-type: none;
 	    li {
 	    	display: inline-block;
-			margin: 8px;
-=======
-	    transform: translateX(-50%);
-	    padding: 0;
-	    margin: 0;
-	    list-style-type: none;
-	    li {
-	    	display: inline-block;
->>>>>>> 8c6975cf4a5cc878fea55ce1dc06eff8df29285b
+			margin: 8px; 
 	    	button {
 	    		    width: 14px;
 					height: 14px;
-					border: 2px solid transparent;
-<<<<<<< HEAD
+					border: 2px solid transparent; 
 					background-color: $grey-light;
 					border-radius: 50%;
 					font-size: 0; 
-					display: block; 
-=======
-					background-color: #8c8c8c;
-					border-radius: 50%;
-					margin: 8px;
-					font-size: 0;
-					line-height: 10px;
-					display: block;
-					padding: 0;
->>>>>>> 8c6975cf4a5cc878fea55ce1dc06eff8df29285b
+					display: block;  
 					outline: none;
 	    	} 
 	    	&.slick-active {
@@ -96,11 +77,8 @@
 		line-height: 70px; 
 		font-size: 50px;
 		z-index: 1;
-		color: $brown-light;
-<<<<<<< HEAD
-		cursor: pointer;
-=======
->>>>>>> 8c6975cf4a5cc878fea55ce1dc06eff8df29285b
+		color: $brown-light; 
+		cursor: pointer; 
 	}
 	.slick-prev { 
 		left: 0px;

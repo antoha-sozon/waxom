@@ -9,11 +9,11 @@ $grey-dark: #555555;
 $grey-light: #8c8c8c;
 $grey-lighten: #fbfaf8; 
 $brown: #615855;
-$brown-light: #998675; 
+$brown-light: #998675;
+$brown-dark: #362f2d;
 $overlay: #111111;
 
-//GRID
-<<<<<<< HEAD
+//GRID 
 $gatter: 30px; 
 $grid-count: 12;  
 $mobile-width: 320px;
@@ -23,11 +23,4 @@ $viewports: (
 	xs: $mobile-width,
 	sm: $tablet-width,
 	md: $conteiner-width
-);  
-=======
-$gatter: 30px;
-
-
-
-$desktop: 1200px;
->>>>>>> 8c6975cf4a5cc878fea55ce1dc06eff8df29285b
+);   

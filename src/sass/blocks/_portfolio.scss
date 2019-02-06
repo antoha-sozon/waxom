@@ -1,0 +1,78 @@
+.portfolio-filter {
+	ul {
+		display: flex;
+		flex-direction: column;  
+		align-items: center;
+		justify-content: space-around; 
+
+    	@media screen and (min-width: 768px) {
+			flex-direction: row;  
+			justify-content: center; 
+    	} 
+		li {
+			margin: 5px;
+			border: 1px solid $grey-light; 
+			border-radius: 3px;  
+			transition: background-color .4s;
+			a {
+				display: block;
+				padding: 10px 20px;
+				text-decoration: none;
+				color: $grey-light;  
+				transition: color .4s;
+			}
+			&:hover,
+			&.active {
+				background-color: $brown-light;
+				a {
+					color: $white;
+				}
+			}
+		}
+	}
+}
+
+.item-prev {
+	position: relative;
+	.item-holder {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba($overlay, .7);
+		a {
+			color: #fff;
+		    text-decoration: none;
+		    font-size: 30px;
+		    margin: $gatter / 2;
+		    &:hover {
+		    	color: $accent;
+		    }
+		}
+	}
+}
+
+.item-info {
+	background-color: $grey-lighten;
+	padding: 30px 25px;
+	position: relative;
+	h5 {
+		color: $accent;
+	}
+	p {
+		color: $grey-light;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		top: -15px;
+		left: 15px;
+		border-bottom: 15px solid $grey-lighten;
+		border-right: 15px solid transparent;
+		border-left: 15px solid transparent;
+	}
+}
