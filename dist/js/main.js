@@ -33,3 +33,20 @@ $('.head-slider').slick({
  		}
 	]
 });
+
+$('.article-items').slick({ 
+	infinite: true, 
+	slidesToShow: 3,
+	slidesToScroll: 3,
+	prevArrow: '<i class="slick-prev icon-chevron-left"></i>',
+	nextArrow: '<i class="slick-next icon-chevron-right"></i>',
+	responsive: [
+		{
+     		breakpoint: 768,
+     		settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+     		}
+ 		}
+	]
+});

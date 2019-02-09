@@ -1,0 +1,36 @@
+.counter {
+    background: $brown-gradient;
+    &-item {
+    	text-align: center;
+    	color: $accent;
+    	margin: 10px 0px;
+	    font-family: Montserrat,sans-serif;
+	    font-size: 48px;
+	    position: relative;
+    	.counter-icon {
+    		font-weight: normal;
+    	}
+    	.counter-number { 
+		    font-weight: 200;
+		    color: $white;
+    	}
+    	.counter-text {
+    		font-size: 14px;
+		    font-weight: 400;
+		    text-transform: uppercase;
+    	}
+    	&:after {
+			content: "";
+			position: absolute;
+			bottom: -15px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 16%;
+			height: 2px;
+			background-color: $white;
+		 	@media screen and (min-width: 768px) {
+				bottom: -30px;
+		    }
+    	}
+    }
+}

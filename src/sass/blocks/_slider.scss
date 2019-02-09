@@ -51,6 +51,7 @@
 	    li {
 	    	display: inline-block;
 			margin: 8px; 
+			padding: 0;
 	    	button {
 	    		    width: 14px;
 					height: 14px;
@@ -61,6 +62,9 @@
 					display: block;  
 					outline: none;
 	    	} 
+	    	&:after {
+	    		display: none;
+	    	}
 	    	&.slick-active {
 	    		button {
 	    			border: 2px solid $brown-light;

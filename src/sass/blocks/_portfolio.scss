@@ -10,10 +10,14 @@
 			justify-content: center; 
     	} 
 		li {
+			padding: 0;
 			margin: 5px;
 			border: 1px solid $grey-light; 
 			border-radius: 3px;  
 			transition: background-color .4s;
+			&:after {
+				display: none;
+			}
 			a {
 				display: block;
 				padding: 10px 20px;
@@ -32,6 +36,11 @@
 	}
 }
 
+.portfolio-items {
+	padding-top: 40px;
+	padding-bottom: 10px;
+}
+
 .item-prev {
 	position: relative;
 	.item-holder {
@@ -43,6 +52,9 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility .4s, opacity .4s;
 		background-color: rgba($overlay, .7);
 		a {
 			color: #fff;
@@ -58,13 +70,17 @@
 
 .item-info {
 	background-color: $grey-lighten;
-	padding: 30px 25px;
+	transition: background-color .4s;
+    padding: 10px 24px 5px;
 	position: relative;
 	h5 {
-		color: $accent;
+		color: $accent; 
+		font-weight: 600;
+		transition: color .4s;
 	}
 	p {
-		color: $grey-light;
+		color: $grey-light; 
+		transition: color .4s;
 	}
 	&:after {
 		content: "";
@@ -73,6 +89,37 @@
 		left: 15px;
 		border-bottom: 15px solid $grey-lighten;
 		border-right: 15px solid transparent;
-		border-left: 15px solid transparent;
+		border-left: 15px solid transparent; 
+		transition: border-bottom .4s;
+	}
+}
+
+.portfolio-item {
+	margin-bottom: 30px;
+	img {
+		width: 100%;
+	}
+	&:hover {
+		cursor: pointer;
+		.item-holder {
+			visibility: visible;
+			opacity: 1;
+		}
+
+		.item-info {
+			background-color: $brown-dark;
+
+			h5 {
+				color: $white;
+			}
+
+			p {
+				color: $accent;
+			}
+
+			&:after {
+				border-bottom: 15px solid  $brown-dark;
+			}
+		}
 	}
 }
