@@ -49,4 +49,4 @@ $('.article-items').slick({
      		}
  		}
 	]
-});
+}); 

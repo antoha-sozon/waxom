@@ -8,6 +8,8 @@
 			cursor: pointer;
 			.article-info { 
 				background-color: $brown-dark;
+				border: 1px solid $brown-dark;
+				border-top: none;
 				h5 {
 					color: $accent;
 				}
@@ -51,7 +53,9 @@
 	text-align: left;
 	padding: 1px 25px 25px 25px ;
 	background-color: transparent;
-	transition: background-color .4s;
+	border: 1px solid darken($grey-lighten, 5%);
+    border-top: none;
+	transition: background-color .4s, border .4s;
 	h5 {
 		font-weight: 600;
 	}

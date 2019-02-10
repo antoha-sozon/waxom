@@ -181,6 +181,10 @@ ul {
   background-color: $grey-lighten;
 }
 
+.bg-dark {
+  background-color: lighten($overlay,3%);
+}
+
 .text-center {
   text-align: center;
 }
@@ -196,9 +200,15 @@ ul {
 .flex-align-center {
   align-items: center;
 } 
+
 .flex-content-center {
   justify-content: center;
 }
+
+.flex-content-between {
+  justify-content: space-between;
+}
+
 .p-0 {
   padding: 0;
 }
@@ -221,12 +231,18 @@ ul {
     &:after {
       content: "";
       position: absolute;
-      right: -20px;
+      right: -15px;
       top: 50%;
       transform: translateY(-50%);
       border-left: 5px solid $accent;
       border-top: 5px solid transparent;
       border-bottom: 5px solid transparent;
+      transition: right .4s;
+    }
+    &:hover {
+      &:after {
+        right: -20px;
+      }
     }
   }
 }
