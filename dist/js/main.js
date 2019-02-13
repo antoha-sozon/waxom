@@ -1,6 +1,7 @@
 document.getElementById('toggleMenu').onclick = function () { 
 	document.getElementById('mainMenu').classList.toggle('open'); 
 	this.classList.toggle('open'); 
+	document.getElementById('header').classList.toggle('open');  
 } 
 
 document.getElementById('seacrh').onclick = function () { 
