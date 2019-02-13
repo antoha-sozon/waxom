@@ -9,6 +9,7 @@
 	<title>Waxom</title>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400&amp;subset=cyrillic" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 	<link rel="stylesheet" type="text/css" href="./css/slick.css"/>
 	<link rel="stylesheet" href="./style.min.css"> 
 </head> 
@@ -173,26 +174,26 @@
 					<div class="portfolio-filter">
 						<ul>
 							<li>
-								<a href="#">All</a>
+								<a href="#" data-filter="*" class="current">All</a>
 							</li>
 							<li>
-								<a href="#">Web Design</a>
-							</li>
-							<li class="active">
-								<a href="#">Mobile App</a>
+								<a href="#" data-filter=".port-web">Web Design</a>
 							</li>
 							<li>
-								<a href="#">Illustration</a>
+								<a href="#" data-filter=".port-mob">Mobile App</a>
 							</li>
 							<li>
-								<a href="#">Photography</a>
+								<a href="#" data-filter=".port-ill" >Illustration</a>
+							</li>
+							<li>
+								<a href="#" data-filter=".port-photo" >Photography</a>
 							</li>
 						</ul>
 					</div>
 					<div class="portfolio-items">
 						<div class="container">
 							<div class="row">
-								<div class="col col-sm-4">
+								<div class="port-web port-mob col col-sm-4">
 									<div class="portfolio-item">
 										<div class="item-prev">
 											<div class="item-img">
@@ -209,11 +210,11 @@
 										</div>
 									</div>
 								</div>
-								<div class="col col-sm-4">
+								<div class="port-mob col col-sm-4">
 									<div class="portfolio-item">
 										<div class="item-prev">
 											<div class="item-img">
-												<img src="./images/portfolio-item1.jpg" alt="Claritas Etiam Processus">
+												<img src="./images/portfolio-item2.jpg" alt="Claritas Etiam Processus">
 											</div>
 											<div class="item-holder">
 												<a href="#"><i class="icon-link"></i></a>
@@ -226,11 +227,11 @@
 										</div>
 									</div>
 								</div>
-								<div class="col col-sm-4">
+								<div class="port-ill col col-sm-4">
 									<div class="portfolio-item">
 										<div class="item-prev">
 											<div class="item-img">
-												<img src="./images/portfolio-item1.jpg" alt="Claritas Etiam Processus">
+												<img src="./images/portfolio-item3.jpg" alt="Claritas Etiam Processus">
 											</div>
 											<div class="item-holder">
 												<a href="#"><i class="icon-link"></i></a>
@@ -243,11 +244,11 @@
 										</div>
 									</div>
 								</div>
-								<div class="col col-sm-4">
+								<div class="port-web col col-sm-4">
 									<div class="portfolio-item">
 										<div class="item-prev">
 											<div class="item-img">
-												<img src="./images/portfolio-item1.jpg" alt="Claritas Etiam Processus">
+												<img src="./images/portfolio-item4.jpg" alt="Claritas Etiam Processus">
 											</div>
 											<div class="item-holder">
 												<a href="#"><i class="icon-link"></i></a>
@@ -260,11 +261,11 @@
 										</div>
 									</div>
 								</div>
-								<div class="col col-sm-4">
+								<div class="port-ill port-photo col col-sm-4">
 									<div class="portfolio-item">
 										<div class="item-prev">
 											<div class="item-img">
-												<img src="./images/portfolio-item1.jpg" alt="Claritas Etiam Processus">
+												<img src="./images/portfolio-item5.jpg" alt="Claritas Etiam Processus">
 											</div>
 											<div class="item-holder">
 												<a href="#"><i class="icon-link"></i></a>
@@ -277,11 +278,11 @@
 										</div>
 									</div>
 								</div>
-								<div class="col col-sm-4">
+								<div class="port-photo col col-sm-4">
 									<div class="portfolio-item">
 										<div class="item-prev">
 											<div class="item-img">
-												<img src="./images/portfolio-item1.jpg" alt="Claritas Etiam Processus">
+												<img src="./images/portfolio-item6.jpg" alt="Claritas Etiam Processus">
 											</div>
 											<div class="item-holder">
 												<a href="#"><i class="icon-link"></i></a>
@@ -298,7 +299,7 @@
 						</div>
 					</div>
 					<div class="text-center">
-						<button class="btn btn-brown">Load More</button> 
+						<button id="portfolioLoadMore" class="btn btn-brown">Load More</button> 
 					</div>  
 				</div>  
 			</section>
@@ -646,6 +647,7 @@
 
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 	<script src="./js/slick.min.js"></script>
 	<script src="./js/main.js"></script>
 </body>

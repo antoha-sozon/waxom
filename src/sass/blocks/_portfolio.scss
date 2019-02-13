@@ -24,9 +24,12 @@
 				text-decoration: none;
 				color: $grey-light;  
 				transition: color .4s;
+				&.current {
+					background-color: $brown-light;
+					color: $white; 
+				}
 			}
-			&:hover,
-			&.active {
+			&:hover {
 				background-color: $brown-light;
 				a {
 					color: $white;
@@ -38,7 +41,7 @@
 
 .portfolio-items {
 	padding-top: 40px;
-	padding-bottom: 10px;
+	padding-bottom: 10px; 
 }
 
 .item-prev {

@@ -1647,13 +1647,16 @@ ul li:after {
   transition: color .4s;
 }
 
-.portfolio-filter ul li:hover,
-.portfolio-filter ul li.active {
+.portfolio-filter ul li a.current {
+  background-color: #998675;
+  color: #fff;
+}
+
+.portfolio-filter ul li:hover {
   background-color: #998675;
 }
 
-.portfolio-filter ul li:hover a,
-.portfolio-filter ul li.active a {
+.portfolio-filter ul li:hover a {
   color: #fff;
 }
 
